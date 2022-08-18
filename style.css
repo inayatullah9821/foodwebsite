@@ -11,13 +11,18 @@
 }
 html{
     font-size: 62.5%;
-    overflow-x: hidden;
+    
+}
 
+html,body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 :root{
     --red:#e84118;
     --clr : #fff;
 }
+
 .btn{
     background: none;
     color: var(--clr);
@@ -30,6 +35,9 @@ html{
     height: 6rem;
     font-size: 2rem;
     margin-top: 3rem;
+}
+header{
+    height: 11.4rem;
 }
 .header1{
     position: relative;
@@ -46,16 +54,29 @@ html{
     color: var(--red);
     font-size: 2.5rem;
 }
+
+.header2 #menu{
+    font-size: 3rem;
+    color: var(--clr);
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+
 .header2 {
     background: var(--red);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 6rem;
+    position: relative;
 }
-.header2 .navbar{
+/* .header2 .navbar{
     margin-left: 2rem;
-}
+} */
 .header2 ul li{
     list-style: none;
     display: inline-block;
@@ -80,10 +101,12 @@ html{
 header .header2 .share a:hover{
     color:#ff0;
 }
+
+
 .home{
     position: relative;
     background: url(imgs/bg.jpg) center center/cover;
-    min-height: 100vh;
+    min-height: calc(100vh - 11.4rem);
     width: 100%;
     color: var(--clr);
     display: flex;
@@ -184,6 +207,14 @@ text-align: center;
 .row .content img{
     width: 30rem;    
 }
+
+
+
+
+
+
+
+
 .dish{
     min-height: 100vh;
 }
@@ -444,4 +475,69 @@ footer .box-container .box i{
 }
 .footer .credit span{
     color: var(--red);
+}
+
+
+@media (max-width: 720px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        position: relative;
+    }
+
+    .header2 #menu{
+        display: block;
+        padding-left: 2rem;
+    }
+    .header2 .navbar{
+        position: absolute;
+        top: 100%;
+        left: -200%;
+        z-index: 500;
+        /* display: none; */
+    }
+
+    .header2 .navbar ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        gap: 2rem;
+        background: #000;
+        min-height: 100vh;
+        width: 32rem;
+        
+    }
+    .header2 .navbar ul li{
+        text-align: center;
+        width: 100%;
+        align-items: center;
+        
+    }
+    .header2 .navbar ul li a{
+        color: var(--red);
+        font-size: 3.5rem;
+        padding: 2rem;
+    }
+    .header2 .fa-times{
+        font-size: 1rem;
+    }
+
+    .header2 .nav-toggle{
+        left: 0;
+    }
+
+}
+
+@media (max-width: 420px){
+    .row{
+        flex-flow: column;
+    }
+    .header1{
+        flex-flow: column;
+    }
+    .header2 .navbar ul{
+        width: 100vw;
+    }
 }
