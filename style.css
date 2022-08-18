@@ -44,6 +44,7 @@ header{
     background: var(--clr);
     color: var(--red);
     display: flex;
+    flex-flow: row;
     justify-content: space-between;
     align-items: center;
     /* border: 1px solid black; */
@@ -534,9 +535,8 @@ footer .box-container .box i{
     .row {
         flex-flow: column;
     }
-    .header1{
-        font-size: 60%;
-    }
+ 
+    .header
     .header2 .navbar ul{
         width: 100vw;
     }
