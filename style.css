@@ -531,11 +531,11 @@ footer .box-container .box i{
 }
 
 @media (max-width: 420px){
-    .row{
+    .row {
         flex-flow: column;
     }
     .header1{
-        flex-flow: column;
+        font-size: 60%;
     }
     .header2 .navbar ul{
         width: 100vw;
